@@ -74,8 +74,10 @@ sequelize.sync()
 //sequelize.sync({alter:true})
 
 
-
-
+//? database bağlantısı yapılır
+sequelize.authenticate()
+.then(()=>console.log('** DB Connected **'))
+.catch(()=>console.log('* DB Not Connected *'))
 
 
 
